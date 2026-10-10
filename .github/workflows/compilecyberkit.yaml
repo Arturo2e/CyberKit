@@ -25,7 +25,7 @@ jobs:
         echo "THEOS=$THEOS" >> $GITHUB_ENV
 
         cd /Users/runner/work/CyberKit/CyberKit
-        git clone https://github.com theos_sdks
+        git clone https://github.com/theos/sdks theos_sdks
         cp -r theos_sdks/iPhoneOS15.6.sdk $THEOS/sdks/
 
     - name: Compile (arm64)
