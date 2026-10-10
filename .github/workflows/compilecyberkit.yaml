@@ -28,6 +28,12 @@ jobs:
         git clone https://github.com/theos/sdks theos_sdks
         cp -r theos_sdks/iPhoneOS15.6.sdk $THEOS/sdks/
 
+    - name: Inyect xpc.h private header
+      run: |
+        mkdir -p /Users/runner/theos/sdks/iPhoneOS15.6.sdk/usr/include/xpc
+        curl -fsSL https://githubusercontent.com \
+             -o /Users/runner/theos/sdks/iPhoneOS15.6.sdk/usr/include/xpc/xpc.h
+
     - name: Compile (arm64)
       env:
         ARCHS: "arm64"
