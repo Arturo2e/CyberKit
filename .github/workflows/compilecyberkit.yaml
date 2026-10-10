@@ -31,7 +31,7 @@ jobs:
     - name: Inyect xpc.h private header
       run: |
         mkdir -p /Users/runner/theos/sdks/iPhoneOS15.6.sdk/usr/include/xpc
-        curl -fsSL https://githubusercontent.com \
+        curl -fsSL https://github.com/theos/templates/blob/f0fb942c4bb90ef331126e2b38257974b18bc895/ios/xpc_service/headers/xpc/xpc.h \
              -o /Users/runner/theos/sdks/iPhoneOS15.6.sdk/usr/include/xpc/xpc.h
 
     - name: Compile (arm64)
