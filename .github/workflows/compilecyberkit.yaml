@@ -34,6 +34,11 @@ jobs:
         curl -fsSL https://github.com/theos/templates/blob/f0fb942c4bb90ef331126e2b38257974b18bc895/ios/xpc_service/headers/xpc/xpc.h \
              -o /Users/runner/theos/sdks/iPhoneOS15.6.sdk/usr/include/xpc/xpc.h
 
+    - name: Configure Xcode for Embbeded  Development
+      run: |
+        chmod +x Tools/Scripts/configure-xcode-for-embedded-development
+        ./Tools/Scripts/configure-xcode-for-embedded-development
+
     - name: Compile (arm64)
       env:
         ARCHS: "arm64"
