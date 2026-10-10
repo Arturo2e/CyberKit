@@ -24,10 +24,6 @@ jobs:
         bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
         echo "THEOS=$THEOS" >> $GITHUB_ENV
 
-    - name: Execute CyberKit configure script
-      run: |
-        ./configure
-
     - name: Compile (arm64)
       run: |
         xcodebuild -project Source/WebKit/WebKit.xcodeproj \
