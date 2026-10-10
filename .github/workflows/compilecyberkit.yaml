@@ -37,7 +37,7 @@ jobs:
     - name: Configure Xcode for Embbeded  Development
       run: |
         chmod +x Tools/Scripts/configure-xcode-for-embedded-development
-        ./Tools/Scripts/configure-xcode-for-embedded-development
+        python ./Tools/Scripts/configure-xcode-for-embedded-development
 
     - name: Compile (arm64)
       env:
